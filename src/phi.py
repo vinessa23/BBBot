@@ -1,14 +1,22 @@
 import math
 from src.game import Game
 
+
 class Phi(Game):
 
   def __init__(self):
+    super().__init__()
     self.number_left = (math.pi - 3) * 10
     self.curr_number = "3."
+    self.score = 0
 
+  def reset(self):
+    self.number_left = (math.pi - 3) * 10
+    self.curr_number = "3."
+    self.score = 0
+  
   def init_msg(self):
-    return "Do you know your Phi? \nLet's start! \n 3.1_"
+    return "Do you know your Phi? \nLet's start!"
 
   def get_first_digit(self, num):
     len = int(math.log10(num))
@@ -35,22 +43,11 @@ class Phi(Game):
 
     self.curr_number += str(num)
     self.number_left = (self.number_left - num) * 10
+    self.score += 1
     return True
 
   def prompt(self):
     return "Current progress: " + self.curr_number + "_" + "\nPlease enter the next number!"
 
   def end(self):
-    return "END."
-
-# test = Phi()
-# print(test.is_correct(1))
-# print(test.prompt())
-# print(test.is_correct(4))
-# print(test.prompt())
-# print(test.is_correct(1))
-# print(test.prompt())
-# print(test.is_correct("5"))
-# print(test.prompt())
-# print(test.is_correct(1))
-# print(test.prompt())
+    return "Game over :( \nYou got " + str(self.score) + " digit(s) correct!"

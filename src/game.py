@@ -1,10 +1,11 @@
 from abc import ABC, abstractmethod
 
+
 class Game(ABC):
 
   def __init__(self):
-    pass
-  
+    self.is_running = True
+
   @abstractmethod
   def init_msg(self):
     pass
@@ -18,7 +19,9 @@ class Game(ABC):
     pass
 
   @abstractmethod
-  def end(self) :
+  def reset(self):
     pass
-  
-    
+
+  @abstractmethod
+  def end(self):
+    pass
