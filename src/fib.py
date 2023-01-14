@@ -1,4 +1,5 @@
 class Fib:
+  
   def __init__(self):
     self.n = 0
     self.m = 1
@@ -9,28 +10,34 @@ class Fib:
 
   def correct_ans(self):
     return self.n + self.m
-    
-  def is_correct(self, user_ans):
-    if self.correct_ans() == user_ans
-      self.counter = self.counter + 1
-      update_num()
-      return prompt()
-    return end()
 
   def update_num(self):
+    temp = self.m
     self.m = self.correct_ans()
-    self.n = self.m
+    self.n = temp
     self.counter = self.counter + 1
 
   def prompt(self):
-    print(self.m)
+    return str(self.m)
 
   def end(self):
-    print("Game over! You get a grand total of " + self.counter + " fibonacci number")
+    return "Game over! You get a grand total of " + str(self.counter) + " fibonacci number"
+    
+  def is_correct(self, ans):
+    if self.correct_ans() == ans:
+      self.counter = self.counter + 1
+      self.update_num()
+      return True
+    return False
 
-test = Fib()
-print(test.is_correct(1))
-print(test.is_correct(3))
+
+
+# test = Fib()
+# print(test.is_correct(1))
+# print(test.prompt())
+# print(test.is_correct(2))
+# print(test.prompt())
+# print(test.is_correct(3))
     
   # def game(self, user_ans):
   #   correct_ans = True
