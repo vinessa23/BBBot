@@ -1,4 +1,6 @@
-class Fib:
+from src.game import Game
+
+class Fib(Game):
   
   def __init__(self):
     self.n = 0
@@ -6,7 +8,7 @@ class Fib:
     self.counter = 2
 
   def init_msg(self):
-    return "Welcome to Fibonacci game! \nHow to play? \nJus enter the next fibonacci number :p"
+    return "Welcome to Fibonacci game! \nHow to play? \nJus enter the next fibonacci number :p\nLet's start! \n0 \n1"
 
   def correct_ans(self):
     return self.n + self.m
@@ -23,8 +25,8 @@ class Fib:
   def end(self):
     return "Game over! You get a grand total of " + str(self.counter) + " fibonacci number"
     
-  def is_correct(self, ans):
-    if self.correct_ans() == ans:
+  def is_correct(self, input):
+    if self.correct_ans() == input:
       self.counter = self.counter + 1
       self.update_num()
       return True

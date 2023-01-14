@@ -7,6 +7,7 @@ authors = ["Replit user <<>>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 telebot = "^0.0.4"
+telegram = "^0.0.1"
 
 [tool.poetry.dev-dependencies]
 

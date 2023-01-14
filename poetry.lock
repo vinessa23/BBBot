@@ -52,6 +52,14 @@ python-versions = "*"
 requests = "*"
 
 [[package]]
+name = "telegram"
+version = "0.0.1"
+description = "Telegram APIs"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "urllib3"
 version = "1.26.14"
 description = "HTTP library with thread-safe connection pooling, file post, and more."
@@ -67,7 +75,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "5e95d1c72ca9a134f24c1886336a33b6e7c871b303db0be534d969071cfeba3d"
+content-hash = "7c733c0cb089700308993d137dabaf695ddf824e940a47c37b3d1ae38195b8a0"
 
 [metadata.files]
 certifi = []
@@ -75,4 +83,5 @@ charset-normalizer = []
 idna = []
 requests = []
 telebot = []
+telegram = []
 urllib3 = []
