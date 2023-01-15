@@ -10,7 +10,7 @@ class Fib(Game):
     self.counter = 0
 
   def init_msg(self):
-    return "Welcome to the Leonardo Bigollo Pisano game! \n\nHow to play? \nJust enter the next fibonacci number :p\n\nThe first 2 fibonacci number are \n0 \n1 \nI will play with you and I will start first!" + "\n\nNotes:" + "\n/restart - to restart the game" + "\n/end - to exit the game"
+    return "Welcome to the Leonardo Bigollo Pisano game! \n\nHow to play? \nJust enter the next fibonacci number :p\n\nThe first 2 fibonacci number are \n0 \n1 \n\nI will play with you and I will start first!" + "\n\nNotes:" + "\n/restart - to restart the game" + "\n/end - to exit the game"
 
   def reset(self):
     self.n = 0
