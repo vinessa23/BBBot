@@ -14,9 +14,9 @@ class Phi(Game):
     self.number_left = (math.pi - 3) * 10
     self.curr_number = "3."
     self.score = 0
-  
+
   def init_msg(self):
-    return "Do you know your Phi? \nLet's start!"
+    return "Do you know your Phi?" + "\nSee how many digits you can recall!" + "\nLet's start!" + "\n\nNotes:" + "\n/restart - to restart the game" + "\n/end - to exit the game"
 
   def get_first_digit(self, num):
     len = int(math.log10(num))
@@ -50,4 +50,15 @@ class Phi(Game):
     return "Current progress: " + self.curr_number + "_" + "\nPlease enter the next number!"
 
   def end(self):
-    return "Game over :( \nYou got " + str(self.score) + " digit(s) correct!"
+    if self.score == 0:
+      comment = "Do you know how to play the game? :\")"
+    elif self.score < 5:
+      comment = "Mid."
+    elif self.score < 10:
+      comment = "Not bad."
+    elif self.score < 50:
+      comment = "Tryhard, huh."
+    else:
+      comment = "Congrats, I guess. Maybe, touch grass sometimes."
+    return "Game over :( \nYou got " + str(
+      self.score) + " digit(s) correct!" + "\n" + comment

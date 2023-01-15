@@ -11,8 +11,9 @@ parser = Parser()
 @bot.message_handler(commands=['start', 'help'])
 def start(message):
   bot.send_message(
-    message.chat.id, "Hi there! Welcome to BB Bot :)" +
-    "\nBelow are the list of games we have:" + "\n  /fib" + "\n  /phi")
+    message.chat.id,
+    "Hi there! Welcome to BB Bot :)" + "\nYou must've been really bored, huh?"
+    "\nHere are the list of games we have:" + "\n  /fib" + "\n  /phi")
 
 
 @bot.message_handler(commands=['fib', 'phi'])

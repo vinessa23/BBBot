@@ -10,7 +10,7 @@ class Fib(Game):
     self.counter = 0
 
   def init_msg(self):
-    return "Welcome to Fibonacci game! \nHow to play? \nJus enter the next fibonacci number :p\nThe first 2 fibonacci number are \n0 \n1 \nI start first!"
+    return "Welcome to the Leonardo Bigollo Pisano game! \n\nHow to play? \nJust enter the next fibonacci number :p\n\nThe first 2 fibonacci number are \n0 \n1 \nI will play with you and I will start first!" + "\n\nNotes:" + "\n/restart - to restart the game" + "\n/end - to exit the game"
 
   def reset(self):
     self.n = 0
@@ -37,8 +37,18 @@ class Fib(Game):
     return self.m
 
   def end(self):
-    return "Game over! You got " + str(
-      self.counter) + " correct answer(s)!"
+    score = "Game over! You got " + str(
+      self.counter) + " correct answer(s). "
+    if self.counter == 0:
+      return score + "You got 0. Seriously? You want play or not?"
+    elif self.counter <= 5:
+      return score + "Decent, I guess."
+    elif self.counter <= 10:
+      return score + "Keep up the good work! You have potential."
+    elif self.counter <= 50:
+      return score + "Einstein much?"
+    else:
+      return score + "I think you should get a life."
 
   def is_correct(self, input):
     if not self.is_integer(input):
@@ -51,23 +61,3 @@ class Fib(Game):
       self.counter += 1
       return True
     return False
-
-
-# test = Fib()
-# print(test.is_correct(2))
-# print(test.prompt())
-# print(test.is_correct("5"))
-# print(test.prompt())
-# print(test.is_correct(8))
-# def game(self, user_ans):
-#   correct_ans = True
-
-#   while(correct_ans)
-#     if user_ans == (self.n + self.m)
-#       self.counter = self.counter + 1
-#       self.n = self.m
-#       self.m = self.m + user_ans
-#       self.counter = self.counter + 1
-#     else
-#       correct_ans = False
-#       msg = "You get a grand total of " + counter + "fibonacci number!"
