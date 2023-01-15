@@ -61,4 +61,5 @@ class Phi(Game):
     else:
       comment = "Congrats, I guess. Maybe, touch grass sometimes."
     return "Game over :( \nYou got " + str(
-      self.score) + " digit(s) correct!" + "\n" + comment
+      self.score
+    ) + " digit(s) correct!" + "\n" + comment + "\n\nPlay again? \n/phi"

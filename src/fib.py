@@ -40,15 +40,16 @@ class Fib(Game):
     score = "Game over! You got " + str(
       self.counter) + " correct answer(s). "
     if self.counter == 0:
-      return score + "You got 0. Seriously? You want play or not?"
+      comment = "You got 0. Seriously? You want play or not?"
     elif self.counter <= 5:
-      return score + "Decent, I guess."
+      comment = "Decent, I guess."
     elif self.counter <= 10:
-      return score + "Keep up the good work! You have potential."
+      comment = "Keep up the good work! You have potential."
     elif self.counter <= 50:
-      return score + "Einstein much?"
+      comment = "Einstein much?"
     else:
-      return score + "I think you should get a life."
+      comment = "I think you should get a life."
+    return score + comment + "\n\nPlay again? \n/fib"
 
   def is_correct(self, input):
     if not self.is_integer(input):
